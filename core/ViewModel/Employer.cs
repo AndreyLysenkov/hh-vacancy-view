@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vacancy.Core.Parse;
+using Vacancy.Core.Model;
 
-namespace Vacancy.Core.View
+namespace Vacancy.Core.ViewModel
 {
 
-    public class EmployerView
+    public class Employer
     {
 
         public string Name;
@@ -24,9 +24,9 @@ namespace Vacancy.Core.View
 
         public string VacanciesUrl;
 
-        public static explicit operator EmployerView(EmployerParse employer)
+        public static explicit operator Employer(EmployerParse employer)
         {
-            EmployerView result = new EmployerView();
+            Employer result = new Employer();
             result.Name = employer.Name;
             result.Url = employer.Alternative_Url;
             result.IsTrusted = employer.Trusted;

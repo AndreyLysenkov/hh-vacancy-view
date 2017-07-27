@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
-    public class ContactsParse
+    public class SpecializationParse
     {
+
+        public string Id;
 
         public string Name;
 
-        public string Email;
+        public string Profarea_Id;
 
-        public PhonesParse[] Phones;
+        public string Profarea_Name;
 
     }
-
 }

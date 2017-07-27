@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vacancy.Core.Parse;
+using Vacancy.Core.Model;
 
-namespace Vacancy.Core.View
+namespace Vacancy.Core.ViewModel
 {
 
-    public class VacancyView
+    public class Vacancy
     {
 
         public string Id;
 
         public string Name;
 
-        public SalaryView Salary;
+        public Salary Salary;
 
         public string Requirement;
 
@@ -33,14 +33,14 @@ namespace Vacancy.Core.View
 
         public bool IsResponseRequired;
 
-        public EmployerView Employer;
+        public Employer Employer;
 
-        public AdressView Adress;
+        public Adress Adress;
 
 
-        public static explicit operator VacancyView(VacancyParse vacancy)
+        public static explicit operator Vacancy(VacancyParse vacancy)
         {
-            VacancyView result = new VacancyView();
+            Vacancy result = new Vacancy();
             result.Id = vacancy.Id;
             result.Name = vacancy.Name;
             result.Requirement = vacancy.Snippet.Requirement;
@@ -52,9 +52,9 @@ namespace Vacancy.Core.View
             result.Published = vacancy.Published_At;
             result.IsResponseRequired = vacancy.Response_Letter_Required;
 
-            result.Adress = vacancy.Adress != null ? (AdressView)vacancy.Adress : null;
-            result.Employer = (EmployerView)vacancy.Employer;
-            result.Salary = vacancy.Salary != null ? (SalaryView)vacancy.Salary : null;
+            result.Adress = vacancy.Adress != null ? (Adress)vacancy.Adress : null;
+            result.Employer = (Employer)vacancy.Employer;
+            result.Salary = vacancy.Salary != null ? (Salary)vacancy.Salary : null;
 
             return result;
         }

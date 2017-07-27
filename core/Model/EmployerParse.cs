@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
     public class EmployerParse
     {

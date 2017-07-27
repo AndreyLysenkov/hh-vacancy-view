@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
-    public class ExperienceParse
+
+    public class TypeParse
     {
 
         public string Id;
@@ -14,4 +15,5 @@ namespace Vacancy.Core.Parse
         public string Name;
 
     }
+
 }

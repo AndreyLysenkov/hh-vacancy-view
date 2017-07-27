@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.View
+namespace Vacancy.Core.ViewModel
 {
 
-    public class SalaryRangeView
+    public class SalaryRange
     {
 
         public int Minimum;
@@ -25,7 +25,7 @@ namespace Vacancy.Core.View
         // NB todo
         //public bool IsFixed
 
-        public SalaryRangeView(int? from, int? to)
+        public SalaryRange(int? from, int? to)
         {
             this.Minimum = from ?? 0;
             this.Maximum = to ?? 0;

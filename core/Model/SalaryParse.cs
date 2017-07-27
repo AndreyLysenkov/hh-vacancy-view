@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
     public class SalaryParse
     {
@@ -16,6 +16,6 @@ namespace Vacancy.Core.Parse
         public bool Gross;
 
         public string Currency;
-        
+
     }
 }

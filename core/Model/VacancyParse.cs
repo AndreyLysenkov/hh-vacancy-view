@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
     public class VacancyParse
     {
@@ -34,11 +34,11 @@ namespace Vacancy.Core.Parse
         public DepartmentParse Department;
 
         public EmploymentParse Employment;
-        
+
         public SalaryParse Salary;
 
         public bool Archived;
-        
+
         public string Name;
 
         public AreaParse Area;

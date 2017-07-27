@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
-    public class LogoParse
+    public class ScheduleParse
     {
 
-        public string Original;
+        public string Id;
+
+        public string Name;
 
     }
 }

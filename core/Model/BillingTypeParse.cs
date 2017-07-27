@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
-
-    public class SnippetParse
+    public class BillingTypeParse
     {
 
-        public string Requirement;
+        public string Id;
 
-        public string Responsibility;
+        public string Name;
 
     }
-
 }

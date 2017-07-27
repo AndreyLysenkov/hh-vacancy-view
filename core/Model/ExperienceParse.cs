@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
-    public class TestParse
+    public class ExperienceParse
     {
 
-        public bool Required;
+        public string Id;
+
+        public string Name;
 
     }
 }

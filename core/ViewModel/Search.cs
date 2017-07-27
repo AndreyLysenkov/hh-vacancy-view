@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vacancy.Core.Parse;
+using Vacancy.Core.Model;
 
-namespace Vacancy.Core.View
+namespace Vacancy.Core.ViewModel
 {
 
-    public class SearchView
+    public class Search
     {
 
-        public List<VacancyView> Vacancies;
+        public List<Vacancy> Vacancies;
 
         public string Url;
 
-        public static explicit operator SearchView(SearchParse searchResult)
+        public static explicit operator Search(SearchParse searchResult)
         {
-            SearchView result = new SearchView();
+            Search result = new Search();
             result.Url = searchResult.Alternate_Url;
             VacancyParse[] vacancyList = searchResult.items;
-            result.Vacancies = new List<VacancyView>();
+            result.Vacancies = new List<Vacancy>();
             foreach (var vacancy in vacancyList)
             {
-                result.Vacancies.Add((VacancyView)vacancy);
+                result.Vacancies.Add((Vacancy)vacancy);
             }
             return result;
         }

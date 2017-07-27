@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vacancy.Core.Parse;
+using Vacancy.Core.Model;
 
-namespace Vacancy.Core.View
+namespace Vacancy.Core.ViewModel
 {
-    public class AdressView
+    public class Adress
     {
 
         public string Street;
@@ -16,16 +16,16 @@ namespace Vacancy.Core.View
 
         public string Description;
 
-        public AdressCoordinatesView Coordinates;
+        public AdressCoordinates Coordinates;
 
-        public static explicit operator AdressView(AdressParse adress)
+        public static explicit operator Adress(AdressParse adress)
         {
-            AdressView result = new AdressView();
+            Adress result = new Adress();
 
             result.Street = adress.Street;
             result.Building = adress.Building;
             result.Description = adress.Description;
-            result.Coordinates = new AdressCoordinatesView(adress.Lat, adress.Lng);
+            result.Coordinates = new AdressCoordinates(adress.Lat, adress.Lng);
 
             return result;
         }

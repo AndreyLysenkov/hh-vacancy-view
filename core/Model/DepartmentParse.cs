@@ -4,18 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
-    public class SpecializationParse
+    public class DepartmentParse
     {
 
         public string Id;
 
         public string Name;
-
-        public string Profarea_Id;
-
-        public string Profarea_Name;
 
     }
 }

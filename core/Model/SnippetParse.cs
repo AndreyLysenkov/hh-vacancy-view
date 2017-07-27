@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
-    public class KeySkillParse
+
+    public class SnippetParse
     {
 
-        public string Name;
+        public string Requirement;
+
+        public string Responsibility;
 
     }
+
 }

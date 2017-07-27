@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
     public class AdressParse
     {
@@ -23,11 +23,11 @@ namespace Vacancy.Core.Parse
 
         public string Raw;
 
-        // сделал dynamic - т.к. в Калуге нет метро, 
+        // сделал dynamic - т.к. в Калуге нет метро,
         // а значит и парсить метро бессмыслено
         public dynamic[] Metro_stations;
-        
+
         public string Id;
-        
+
     }
 }

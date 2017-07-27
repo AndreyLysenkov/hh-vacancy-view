@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.Parse
+namespace Vacancy.Core.Model
 {
-    public class ScheduleParse
+    public class AreaParse
     {
+
+        public string Url;
 
         public string Id;
 

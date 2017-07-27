@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core.View
+namespace Vacancy.Core.ViewModel
 {
-    public class Model
+    public class ViewModel
     {
 
         public enum Experience
@@ -20,7 +20,7 @@ namespace Vacancy.Core.View
 
         private SiteApi api;
 
-        public Model()
+        public ViewModel()
         {
             this.api = new SiteApi();
         }
@@ -34,7 +34,7 @@ namespace Vacancy.Core.View
         }
 
         // isTownOnly - если true - осуществляет фильтрацию по городу Калуга
-        public SearchView Search(string text, Experience experience, bool isTownOnly)
+        public Search SearchVacancy(string text, Experience experience, bool isTownOnly)
         {
             // TODO: строковый запрос сделать url save (sort of speek)
             SiteApi api = new SiteApi();
@@ -44,13 +44,11 @@ namespace Vacancy.Core.View
             if (isTownOnly)
                 arguments.Add(Tuple.Create("area", "43"));
             arguments.Add(Tuple.Create("currency_code", "RUR"));
-            arguments.Add(Tuple.Create("experience", Model.ExperienceEnumToParametr(experience)));
+            arguments.Add(Tuple.Create("experience", ViewModel.ExperienceEnumToParametr(experience)));
             arguments.Add(Tuple.Create("order_by", "publication_time"));
             arguments.Add(Tuple.Create("items_on_page", "10"));
-            Core.Parse.SearchParse searchResult = api.SearchVacancy(arguments.ToArray());
-            SearchView viewResult = (SearchView)searchResult;
-            // break point на следующей строчке для просмотра результатов
-            return viewResult;
+            Model.SearchParse searchResult = api.SearchVacancy(arguments.ToArray());
+            return (Search)searchResult;
         }
 
     }

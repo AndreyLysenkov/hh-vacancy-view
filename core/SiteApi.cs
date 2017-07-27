@@ -6,7 +6,7 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using Vacancy.Core.Parse;
+using Vacancy.Core.Model;
 
 namespace Vacancy.Core
 {

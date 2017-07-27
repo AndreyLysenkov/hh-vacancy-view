@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.ViewModel
 {
-    public class AdressCoordinatesView
+    public class AdressCoordinates
     {
 
         public double Lat;
@@ -15,7 +15,7 @@ namespace Vacancy.Core
 
         public bool IsSet;
 
-        public AdressCoordinatesView(double? lat, double? lng)
+        public AdressCoordinates(double? lat, double? lng)
         {
             this.Lat = lat ?? 0;
             this.Lng = lng ?? 0;
