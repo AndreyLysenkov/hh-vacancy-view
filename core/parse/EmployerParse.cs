@@ -11,7 +11,7 @@ namespace Vacancy.Core.Parse
 
         public LogoParse Logo_Urls;
 
-        public string Vacancies_url;
+        public string Vacancies_Url;
 
         public string Name;
 

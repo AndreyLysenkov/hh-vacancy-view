@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vacancy.Core.View;
 
 using Vacancy.Core;
 
@@ -13,7 +14,7 @@ namespace Vacancy.Runner
         static void Main(string[] args)
         {
             SiteApi api = new SiteApi();
-            SearchParse searchResult = api.SearchVacancy(
+            Core.Parse.SearchParse searchResult = api.SearchVacancy(
                 Tuple.Create("text", "c%23+developer"),
                 Tuple.Create("area", "43"),
                 Tuple.Create("currency_code", "RUR"),
@@ -21,8 +22,10 @@ namespace Vacancy.Runner
                 Tuple.Create("order_by", "publication_time"),
                 Tuple.Create("items_on_page", "20")
                 );
+            SearchView viewResult = (SearchView)searchResult;
             // break point на следующей строчке для просмотра результатов
             Console.WriteLine(searchResult);
+            Console.WriteLine(viewResult);
             Console.ReadLine();
         }
     }
