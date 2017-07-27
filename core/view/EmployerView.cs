@@ -27,12 +27,11 @@ namespace Vacancy.Core.View
         public static explicit operator EmployerView(EmployerParse employer)
         {
             EmployerView result = new EmployerView();
-
             result.Name = employer.Name;
             result.Url = employer.Alternative_Url;
             result.IsTrusted = employer.Trusted;
             result.VacanciesUrl = employer.Vacancies_Url;
-            result.LogoUrl = employer.Logo_Urls.Original;
+            result.LogoUrl = employer.Logo_Urls?.Original;
 
             return result;
         }

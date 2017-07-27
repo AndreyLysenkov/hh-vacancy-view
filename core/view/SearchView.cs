@@ -22,7 +22,7 @@ namespace Vacancy.Core.View
             VacancyParse[] vacancyList = searchResult.items;
             foreach (var vacancy in vacancyList)
             {
-                //result.Vacancies.Add((VacancyView)vacancy);
+                result.Vacancies.Add((VacancyView)vacancy);
             }
             return result;
         }

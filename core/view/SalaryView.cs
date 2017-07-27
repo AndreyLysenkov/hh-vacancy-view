@@ -12,22 +12,15 @@ namespace Vacancy.Core.View
 
         public SalaryRangeView Range;
 
-        public string Currency;
-
-        public bool Gross;
+        public bool? Gross;
 
         public static explicit operator SalaryView(SalaryParse salary)
         {
             SalaryView result = new SalaryView();
-
-            result.Currency = salary.Currency;
             result.Gross = salary.Gross;
-
             result.Range = new SalaryRangeView(salary.From, salary.To);
-
             return result;
         }
-
 
     }
 }

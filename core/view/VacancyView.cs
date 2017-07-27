@@ -41,7 +41,6 @@ namespace Vacancy.Core.View
         public static explicit operator VacancyView(VacancyParse vacancy)
         {
             VacancyView result = new VacancyView();
-
             result.Id = vacancy.Id;
             result.Name = vacancy.Name;
             result.Requirement = vacancy.Snippet.Requirement;
@@ -53,9 +52,9 @@ namespace Vacancy.Core.View
             result.Published = vacancy.Published_At;
             result.IsResponseRequired = vacancy.Response_Letter_Required;
 
-            result.Adress = (AdressView)vacancy.Adress;
+            result.Adress = vacancy.Adress != null ? (AdressView)vacancy.Adress : null;
             result.Employer = (EmployerView)vacancy.Employer;
-            result.Salary = (SalaryView)vacancy.Salary;
+            result.Salary = vacancy.Salary != null ? (SalaryView)vacancy.Salary : null;
 
             return result;
         }
