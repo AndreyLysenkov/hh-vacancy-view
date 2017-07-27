@@ -23,9 +23,9 @@ namespace Vacancy.Core
 
         public string Street;
 
-        public Double Lat;
+        public Double? Lat;
 
-        public Double Lng;
+        public Double? Lng;
 
         public string Id;
 

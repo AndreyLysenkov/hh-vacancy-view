@@ -43,6 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model.cs" />
+    <Compile Include="papse\AdressParse.cs" />
+    <Compile Include="papse\AreaParse.cs" />
+    <Compile Include="papse\EmployerParse.cs" />
+    <Compile Include="papse\LogoParse.cs" />
+    <Compile Include="papse\SearchParse.cs" />
+    <Compile Include="papse\VacancyParse.cs" />
+    <Compile Include="papse\SalaryParse.cs" />
+    <Compile Include="papse\SnippetParse.cs" />
+    <Compile Include="papse\TypeParse.cs" />
     <Compile Include="SiteApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

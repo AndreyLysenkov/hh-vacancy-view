@@ -68,6 +68,12 @@ namespace Vacancy.Core
             return this.Request($"/{path}?{string.Join("&", parametr.ToList().ConvertAll<string>((param) => $"{param.Item1}={param.Item2}"))}");
         }
 
+        public SearchParse SearchVacancy(params Tuple<string, string>[] param)
+        {
+            string request = this.Request("vacancies", param);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<SearchParse>(request);
+        }
+
     }
 
 }

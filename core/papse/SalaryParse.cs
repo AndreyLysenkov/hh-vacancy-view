@@ -9,9 +9,9 @@ namespace Vacancy.Core
     public class SalaryParse
     {
 
-        public int To;
+        public int? To;
 
-        public int From;
+        public int? From;
 
         public string Currency;
 
