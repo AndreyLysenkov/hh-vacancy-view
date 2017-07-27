@@ -29,7 +29,7 @@ namespace Vacancy.Core.View
         {
             // Do not like this todo: NB
             string result = experience.ToString();
-            result = result[0].ToLowerCase() + result.Copy(1);
+            result = result[0].ToString().ToLower() + result.Substring(1);
             return result;
         }
 

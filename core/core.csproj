@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model.cs" />
+    <Compile Include="view\Model.cs" />
     <Compile Include="parse\AdressParse.cs" />
     <Compile Include="parse\AreaParse.cs" />
     <Compile Include="parse\BillingTypeParse.cs" />
