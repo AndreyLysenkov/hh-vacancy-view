@@ -7,8 +7,8 @@
     <ProjectGuid>{6E6E3443-4EB8-4298-ACAC-FE5EC5EC0517}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>core</RootNamespace>
-    <AssemblyName>core</AssemblyName>
+    <RootNamespace>Vacancy.Core</RootNamespace>
+    <AssemblyName>hh-vacancy-view.core</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -44,20 +44,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model.cs" />
-    <Compile Include="papse\AdressParse.cs" />
-    <Compile Include="papse\AreaParse.cs" />
-    <Compile Include="papse\EmployerParse.cs" />
-    <Compile Include="papse\LogoParse.cs" />
-    <Compile Include="papse\SearchParse.cs" />
-    <Compile Include="papse\VacancyParse.cs" />
-    <Compile Include="papse\SalaryParse.cs" />
-    <Compile Include="papse\SnippetParse.cs" />
-    <Compile Include="papse\TypeParse.cs" />
+    <Compile Include="parse\AdressParse.cs" />
+    <Compile Include="parse\AreaParse.cs" />
+    <Compile Include="parse\BillingTypeParse.cs" />
+    <Compile Include="parse\ContactsParse.cs" />
+    <Compile Include="parse\DepartmentParse.cs" />
+    <Compile Include="parse\EmployerParse.cs" />
+    <Compile Include="parse\EmploymentParse.cs" />
+    <Compile Include="parse\ExperienceParse.cs" />
+    <Compile Include="parse\KeySkillParse.cs" />
+    <Compile Include="parse\LogoParse.cs" />
+    <Compile Include="parse\PhonesParse.cs" />
+    <Compile Include="parse\ScheduleParse.cs" />
+    <Compile Include="parse\SearchParse.cs" />
+    <Compile Include="parse\SpecializationParse.cs" />
+    <Compile Include="parse\TestParse.cs" />
+    <Compile Include="parse\VacancyParse.cs" />
+    <Compile Include="parse\SalaryParse.cs" />
+    <Compile Include="parse\SnippetParse.cs" />
+    <Compile Include="parse\TypeParse.cs" />
     <Compile Include="SiteApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\AdressView.cs" />
+    <Compile Include="view\AreaView.cs" />
+    <Compile Include="view\EmployerView.cs" />
+    <Compile Include="view\LogoView.cs" />
+    <Compile Include="view\SalaryView.cs" />
+    <Compile Include="view\SearchView.cs" />
+    <Compile Include="view\SnippetView.cs" />
+    <Compile Include="view\TypeView.cs" />
+    <Compile Include="view\VacancyView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

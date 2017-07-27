@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.Parse
 {
 
-    public class SnippetParse
+    public class TypeParse
     {
 
-        public string Requirement;
+        public string Id;
 
-        public string Responsibility;
+        public string Name;
 
     }
 

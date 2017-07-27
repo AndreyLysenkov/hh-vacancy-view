@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.Parse
 {
     public class EmployerParse
     {
@@ -22,6 +22,8 @@ namespace Vacancy.Core
         public string Id;
 
         public bool Trusted;
+
+        public string Blacklisted;
 
     }
 }

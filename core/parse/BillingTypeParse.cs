@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.Parse
 {
-    public class LogoParse
+    public class BillingTypeParse
     {
 
-        public string Original;
+        public string Id;
+
+        public string Name;
 
     }
 }

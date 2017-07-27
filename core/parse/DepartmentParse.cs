@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.Parse
 {
-
-    public class TypeParse
+    public class DepartmentParse
     {
 
         public string Id;
@@ -15,5 +14,4 @@ namespace Vacancy.Core
         public string Name;
 
     }
-
 }
