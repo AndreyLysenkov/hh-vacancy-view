@@ -20,7 +20,11 @@ namespace Vacancy.Core.View
             SearchView result = new SearchView();
             result.Url = searchResult.Alternate_Url;
             VacancyParse[] vacancyList = searchResult.items;
-            result.Vacancies = vacancyList.Cast<VacancyView>().ToList();
+            result.Vacancies = new List<VacancyView>();
+            foreach (var vacancy in vacancyList)
+            {
+                result.Vacancies.Add((VacancyView)vacancy);
+            }
             return result;
         }
 
