@@ -13,19 +13,12 @@ namespace Vacancy.Runner
     {
         static void Main(string[] args)
         {
-            SiteApi api = new SiteApi();
-            Core.Parse.SearchParse searchResult = api.SearchVacancy(
-                Tuple.Create("text", "c%23+developer"),
-                Tuple.Create("area", "43"),
-                Tuple.Create("currency_code", "RUR"),
-                Tuple.Create("experience", "between1And3"),
-                Tuple.Create("order_by", "publication_time"),
-                Tuple.Create("items_on_page", "20")
-                );
-            SearchView viewResult = (SearchView)searchResult;
+            Model model = new Model();
+            SearchView searchCSharp = model.Search("c%23+developer",
+                experience: Model.Experience.Between1And3,
+                isTownOnly: true);
             // break point на следующей строчке для просмотра результатов
-            Console.WriteLine(searchResult);
-            Console.WriteLine(viewResult);
+            Console.WriteLine(searchCSharp);
             Console.ReadLine();
         }
     }

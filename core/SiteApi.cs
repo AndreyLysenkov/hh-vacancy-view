@@ -12,40 +12,14 @@ namespace Vacancy.Core
 {
     public class SiteApi
     {
-        
+
         private HttpClient client;
 
-        private Dictionary<string, string> experienceValue;
-
         public SiteApi()
-        {
-            this.Activate();
-        }
-
-        private void Activate_HttpClient()
         {
             this.client = new HttpClient();
             this.client.BaseAddress = new Uri("https://api.hh.ru/");
             this.client.DefaultRequestHeaders.UserAgent.ParseAdd("HH-Vacancy-View/1.0 (allan_walpy)");
-        }
-
-        private void Activate_ExperienceValue()
-        {
-            string api = this.Request("/dictionaries");
-            JObject apiJson = JObject.Parse(api);
-            List<JToken> list = apiJson["experience"].Children().ToList();
-            this.experienceValue = new Dictionary<string, string>();
-            foreach (var element in list)
-            {
-                this.experienceValue.Add(element["id"].ToString(), element["name"].ToString());
-            }
-        }
-
-        public void Activate()
-        {
-            Activate_HttpClient();
-            Activate_ExperienceValue();
-
         }
 
         public async Task<string> RequestAsync(string uri)
