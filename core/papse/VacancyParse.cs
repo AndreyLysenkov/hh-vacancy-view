@@ -21,9 +21,9 @@ namespace Vacancy.Core
 
         public SnippetParse Snippet;
 
-        public string Created_At;
+        public DateTime Created_At;
 
-        public string Published_At;
+        public DateTime Published_At;
 
         public string Apply_Alternate_Url;
 
