@@ -13,5 +13,6 @@ namespace hh_vacancy_view
     /// </summary>
     public partial class App : Application
     {
+
     }
 }
