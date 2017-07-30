@@ -26,12 +26,6 @@ namespace hh_vacancy_view
             InitializeComponent();
             ViewModel viewModel = new ViewModel();
             this.DataContext = viewModel;
-
-            Binding binding = new Binding();
-
-            binding.ElementName = "KeyWordsText"; // элемент-источник
-            binding.Path = new PropertyPath("Text"); // свойство элемента-источника
-            KeyWordsText.SetBinding(TextBox.TextProperty, binding); // установка привязки для элемента-приемника
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
