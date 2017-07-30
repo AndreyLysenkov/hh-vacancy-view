@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Vacancy.Core.ViewModel;
 
 namespace hh_vacancy_view
 {
@@ -23,6 +24,24 @@ namespace hh_vacancy_view
         public MainWindow()
         {
             InitializeComponent();
+            ViewModel viewModel = new ViewModel();
+            this.DataContext = viewModel;
+
+            Binding binding = new Binding();
+
+            binding.ElementName = "KeyWordsText"; // элемент-источник
+            binding.Path = new PropertyPath("Text"); // свойство элемента-источника
+            KeyWordsText.SetBinding(TextBox.TextProperty, binding); // установка привязки для элемента-приемника
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ViewModel m = (ViewModel)DataContext;
+            string response = $"key words: {m.KeyWords}\n";
+            response += $"work experience: {m.WorkExperience.ToString()}\n";
+            response += $"search restricted by town only: {m.IsTownOnly.ToString()}\n";
+            System.IO.File.WriteAllText("fields state.txt", response);
+        }
+
     }
 }

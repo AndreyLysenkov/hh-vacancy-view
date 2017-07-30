@@ -7,8 +7,8 @@
     <ProjectGuid>{6E6E3443-4EB8-4298-ACAC-FE5EC5EC0517}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>core</RootNamespace>
-    <AssemblyName>core</AssemblyName>
+    <RootNamespace>Vacancy.Core</RootNamespace>
+    <AssemblyName>hh-vacancy-view.core</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,11 +43,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="Model\AdressParse.cs" />
+    <Compile Include="Model\AreaParse.cs" />
+    <Compile Include="Model\BillingTypeParse.cs" />
+    <Compile Include="Model\ContactsParse.cs" />
+    <Compile Include="Model\DepartmentParse.cs" />
+    <Compile Include="Model\EmployerParse.cs" />
+    <Compile Include="Model\EmploymentParse.cs" />
+    <Compile Include="Model\ExperienceParse.cs" />
+    <Compile Include="Model\KeySkillParse.cs" />
+    <Compile Include="Model\LogoParse.cs" />
+    <Compile Include="Model\PhonesParse.cs" />
+    <Compile Include="Model\ScheduleParse.cs" />
+    <Compile Include="Model\SearchParse.cs" />
+    <Compile Include="Model\SpecializationParse.cs" />
+    <Compile Include="Model\TestParse.cs" />
+    <Compile Include="Model\VacancyParse.cs" />
+    <Compile Include="Model\SalaryParse.cs" />
+    <Compile Include="Model\SnippetParse.cs" />
+    <Compile Include="Model\TypeParse.cs" />
     <Compile Include="SiteApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\Adress.cs" />
+    <Compile Include="ViewModel\AdressCoordinates.cs" />
+    <Compile Include="ViewModel\Employer.cs" />
+    <Compile Include="ViewModel\Salary.cs" />
+    <Compile Include="ViewModel\Search.cs" />
+    <Compile Include="ViewModel\SalaryRange.cs" />
+    <Compile Include="ViewModel\Vacancy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

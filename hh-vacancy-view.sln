@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hh-vacancy-view", "hh-vacancy-view\hh-vacancy-view.csproj", "{E2CB89A7-FB9C-420C-8FBB-275AAEA8D0D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfInterface", "hh-vacancy-view\WpfInterface.csproj", "{E2CB89A7-FB9C-420C-8FBB-275AAEA8D0D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core", "core\core.csproj", "{6E6E3443-4EB8-4298-ACAC-FE5EC5EC0517}"
 EndProject
