@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.Model
 {
-
-    public class SnippetParse
+    public class LogoParse
     {
 
-        public string Requirement;
-
-        public string Responsibility;
+        public string Original;
 
     }
-
 }

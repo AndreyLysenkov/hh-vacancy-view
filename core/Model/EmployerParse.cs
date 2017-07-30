@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.Model
 {
     public class EmployerParse
     {
 
         public LogoParse Logo_Urls;
 
-        public string Vacancies_url;
+        public string Vacancies_Url;
 
         public string Name;
 
@@ -22,6 +22,8 @@ namespace Vacancy.Core
         public string Id;
 
         public bool Trusted;
+
+        public string Blacklisted;
 
     }
 }

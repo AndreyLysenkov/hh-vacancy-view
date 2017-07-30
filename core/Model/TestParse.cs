@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.Model
 {
-    public class LogoParse
+    public class TestParse
     {
 
-        public string Original;
+        public bool Required;
 
     }
 }

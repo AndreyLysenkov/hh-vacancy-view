@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vacancy.Core
+namespace Vacancy.Core.Model
 {
     public class SalaryParse
     {
 
-        public int To;
+        public int? From;
 
-        public int From;
-
-        public string Currency;
+        public int? To;
 
         public bool Gross;
+
+        public string Currency;
 
     }
 }
