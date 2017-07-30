@@ -7,8 +7,14 @@ using System.ComponentModel;
 
 namespace Vacancy.Core.ViewModel
 {
-    public class ViewModel
+    public class ViewModel : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public enum Experience
         {
@@ -26,11 +32,46 @@ namespace Vacancy.Core.ViewModel
 
         private SiteApi api;
 
-        public string KeyWords;
+        private string _keyWords;
+        public string KeyWords
+        {
+            get
+            {
+                return _keyWords;
+            }
+            set
+            {
+                _keyWords = value;
+                RaisePropertyChanged("KeyWords");
+            }
+        }
+        private Experience _workExperience;
+        public Experience WorkExperience
+        {
+            get
+            {
+                return _workExperience;
+            }
+            set
+            {
+                _workExperience = value;
+                RaisePropertyChanged("WorkExperience");
+            }
+        }
 
-        public Experience WorkExperience;
-
-        public bool IsTownOnly;
+        private bool _isTownOnly;
+        public bool IsTownOnly
+        {
+            get
+            {
+                return _isTownOnly;
+            }
+            set
+            {
+                _isTownOnly = value;
+                RaisePropertyChanged("IsTownOnly");
+            }
+        }
 
         public ViewModel()
         {
